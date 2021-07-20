@@ -9,6 +9,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,3 +63,5 @@ inoremap <S-Tab> <C-d>
 set hlsearch
 
 set backspace=
+
+set gfn=Source\ Code\ Pro\ 10
