@@ -5,17 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'rust-lang/rust.vim'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
-
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
 
 set t_Co=256
 set t_ut=
@@ -27,7 +23,7 @@ set ttimeoutlen=0
 set cursorline
 
 syntax on
-colorscheme codedark
+colorscheme jellybeans
 
 map <up> <nop>
 map <down> <nop>
@@ -65,3 +61,25 @@ set hlsearch
 set backspace=
 
 set gfn=Source\ Code\ Pro\ 10
+
+set laststatus=2
+set cc=80
+
+fun! GitStatusLine()
+    let l:branch = fugitive#head()
+    return strlen(l:branch) > 0 ? '  ' . l:branch : ''
+endfun
+
+set statusline=
+set statusline+=%{GitStatusLine()}                          " Git branch name
+set statusline+=\ %y                                        " File type
+set statusline+=\ %f                                        " Current file
+set statusline+=%m                                          " Modified flag
+set statusline+=%r                                          " Read only flag
+set statusline+=%w                                          " Preview flag
+set statusline+=%=                                          " Switch to right
+set statusline+=%l/%L                                       " Line number
+set statusline+=\ %3p%%                                     " % through file
+set statusline+=\ %3c                                       " Column number
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}  " File encoding
+set statusline+=\ %{&ff}                                    " Line ending
