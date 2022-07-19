@@ -8,7 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'rust-lang/rust.vim'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
 filetype plugin indent on
@@ -23,7 +23,7 @@ set ttimeoutlen=0
 set cursorline
 
 syntax on
-colorscheme jellybeans
+colorscheme codedark
 
 map <up> <nop>
 map <down> <nop>

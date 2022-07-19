@@ -12,4 +12,5 @@ syn match cCustomScope "::"
 syn match cCustomClass "\w\+\s*::" contains=cCustomScope
 
 hi def link cCustomFunc  Function
-hi def link cCustomClass Type
+hi def link cCustomClass pythonClassDef
+"hi def link cCustomClass Type
