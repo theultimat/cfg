@@ -9,6 +9,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tomasiser/vim-code-dark'
+Plugin 'ycm-core/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -83,3 +84,8 @@ set statusline+=\ %3p%%                                     " % through file
 set statusline+=\ %3c                                       " Column number
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}  " File encoding
 set statusline+=\ %{&ff}                                    " Line ending
+
+set completeopt+=popup
+
+nnoremap <leader>fj :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>ff :YcmCompleter GoToDefinition<CR>
