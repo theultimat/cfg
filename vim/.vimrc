@@ -66,7 +66,7 @@ set laststatus=2
 set cc=80
 
 fun! GitStatusLine()
-    let l:branch = fugitive#head()
+    let l:branch = fugitive#Head()
     return strlen(l:branch) > 0 ? '  ' . l:branch : ''
 endfun
 
