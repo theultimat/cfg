@@ -89,3 +89,5 @@ set statusline+=\ %3p%%                                     " % through file
 set statusline+=\ %3c                                       " Column number
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}  " File encoding
 set statusline+=\ %{&ff}                                    " Line ending
+
+set foldmethod=marker
