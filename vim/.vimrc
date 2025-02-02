@@ -7,8 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tikhomirov/vim-glsl'
-Plugin 'rust-lang/rust.vim'
-Plugin 'tomasiser/vim-code-dark'
+Plugin 'lunacookies/vim-colors-xcode'
 
 call vundle#end()
 filetype plugin indent on
@@ -29,7 +28,9 @@ set ttimeoutlen=0
 set cursorline
 
 syntax on
-colorscheme codedark
+set background=light
+let g:xcodehc_green_comments = 1
+colorscheme xcodehc
 
 map <up> <nop>
 map <down> <nop>
