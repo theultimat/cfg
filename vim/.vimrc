@@ -28,9 +28,14 @@ set ttimeoutlen=0
 set cursorline
 
 syntax on
-set background=light
 let g:xcodehc_green_comments = 1
 colorscheme xcodehc
+
+if system('uname') =~ 'Darwin' && system('defaults read -g AppleInterfaceStyle') =~ 'Dark'
+    set background=dark
+else
+    set background=light
+endif
 
 map <up> <nop>
 map <down> <nop>
